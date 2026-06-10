@@ -63,30 +63,30 @@
             <div class="form-card">
               <h2 style="color:var(--navy);margin-bottom:0.5rem;">Request Your Free Audit</h2>
               <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;">We'll review your site and send you a plain-language report within 2 business days.</p>
-              <form action="https://formspree.io/f/placeholder" method="POST">
+              <form action="https://docs.google.com/forms/d/e/1FAIpQLScdSSAc-4VBuZbkBr5tDtH801m5rvGQ4Cy7kHdrDw1rzaMfig/formResponse" method="POST" target="hidden_iframe" onsubmit="showAuditThanks()">
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                  <input type="text" id="name" name="entry.216941808" placeholder="Jane Smith" required />
                 </div>
                 <div class="form-group">
                   <label for="business">Business Name</label>
-                  <input type="text" id="business" name="business" placeholder="Smith Plumbing LLC" required />
+                  <input type="text" id="business" name="entry.560779542" placeholder="Smith Plumbing LLC" required />
                 </div>
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="jane@smithplumbing.com" required />
+                  <input type="email" id="email" name="entry.1976563099" placeholder="jane@smithplumbing.com" required />
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="(912) 555-0100" />
+                  <input type="tel" id="phone" name="entry.1360285275" placeholder="(912) 555-0100" />
                 </div>
                 <div class="form-group">
                   <label for="website">Your Current Website URL</label>
-                  <input type="url" id="website" name="website" placeholder="https://yoursite.com" />
+                  <input type="url" id="website" name="entry.632530509" placeholder="https://yoursite.com" />
                 </div>
                 <div class="form-group">
                   <label for="goal">What's your biggest goal right now?</label>
-                  <select id="goal" name="goal">
+                  <select id="goal" name="entry.1180287783">
                     <option value="">Select one...</option>
                     <option>Get more calls / leads from Google</option>
                     <option>Improve my Google ranking</option>
@@ -97,8 +97,14 @@
                 </div>
                 <button type="submit" class="btn" style="width:100%;text-align:center;border:none;cursor:pointer;font-size:1rem;">Send My Free Audit Request</button>
               </form>
+              <div id="audit-thanks" style="display:none;background:#f0fbff;border:1px solid var(--accent);border-radius:var(--radius);padding:1.5rem;margin-top:1rem;">
+                <strong style="color:var(--navy);">✓ Request received!</strong>
+                <p style="color:var(--muted);font-size:0.9rem;margin-top:0.4rem;">We'll review your site and send you a plain-language report within 2 business days.</p>
+              </div>
             </div>
           </div>
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+          <script>function showAuditThanks(){ setTimeout(function(){ document.getElementById('audit-thanks').style.display='block'; document.querySelector('#audit-thanks').closest('.form-card').querySelector('form').style.display='none'; }, 500); }</script>
 
         </div>
       </div>

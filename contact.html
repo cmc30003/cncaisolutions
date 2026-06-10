@@ -73,26 +73,26 @@
             <div class="form-card">
               <h2 style="color:var(--navy);margin-bottom:0.5rem;">Send Us a Message</h2>
               <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem;">We'll respond within 1 business day.</p>
-              <form action="https://formspree.io/f/placeholder" method="POST">
+              <form action="https://docs.google.com/forms/d/e/1FAIpQLSeTJd41vK1SmqmO2H-xihHrLkGOGL7-1a-i6suQMVGNGWU1KA/formResponse" method="POST" target="hidden_iframe" onsubmit="showContactThanks()">
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                  <input type="text" id="name" name="entry.48252393" placeholder="Jane Smith" required />
                 </div>
                 <div class="form-group">
                   <label for="business">Business Name</label>
-                  <input type="text" id="business" name="business" placeholder="Smith Plumbing LLC" />
+                  <input type="text" id="business" name="entry.499815263" placeholder="Smith Plumbing LLC" />
                 </div>
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="jane@smithplumbing.com" required />
+                  <input type="email" id="email" name="entry.723187108" placeholder="jane@smithplumbing.com" required />
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="(912) 555-0100" />
+                  <input type="tel" id="phone" name="entry.950459486" placeholder="(912) 555-0100" />
                 </div>
                 <div class="form-group">
                   <label for="service">What are you interested in?</label>
-                  <select id="service" name="service">
+                  <select id="service" name="entry.1384690566">
                     <option value="">Select one...</option>
                     <option>New Website Build</option>
                     <option>Monthly Care Plan</option>
@@ -104,12 +104,18 @@
                 </div>
                 <div class="form-group">
                   <label for="message">Tell us a bit about your situation</label>
-                  <textarea id="message" name="message" placeholder="What's going on with your current site? What does success look like for your business online?"></textarea>
+                  <textarea id="message" name="entry.566534288" placeholder="What's going on with your current site? What does success look like for your business online?"></textarea>
                 </div>
                 <button type="submit" class="btn" style="width:100%;text-align:center;border:none;cursor:pointer;font-size:1rem;">Send Message</button>
               </form>
+              <div id="contact-thanks" style="display:none;background:#f0fbff;border:1px solid var(--accent);border-radius:var(--radius);padding:1.5rem;margin-top:1rem;">
+                <strong style="color:var(--navy);">✓ Message received!</strong>
+                <p style="color:var(--muted);font-size:0.9rem;margin-top:0.4rem;">We'll get back to you within 1 business day.</p>
+              </div>
             </div>
           </div>
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+          <script>function showContactThanks(){ setTimeout(function(){ document.getElementById('contact-thanks').style.display='block'; document.querySelector('#contact-thanks').closest('.form-card').querySelector('form').style.display='none'; }, 500); }</script>
 
         </div>
       </div>
