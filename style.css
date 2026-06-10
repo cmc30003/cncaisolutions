@@ -87,7 +87,7 @@ nav a:hover { color: var(--accent); }
 /* ── Process page ── */
 .phase-grid { display: flex; flex-direction: column; gap: 2rem; }
 .phase { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: start; }
-.phase-badge { width: 64px; height: 64px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem; text-align: center; line-height: 1.2; flex-shrink: 0; }
+.phase-badge { width: 90px; background: var(--navy); color: var(--white); border-radius: 40px; padding: 0.6rem 0.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; font-size: 0.72rem; text-align: center; line-height: 1.4; flex-shrink: 0; letter-spacing: 0.5px; }
 .phase-body h3 { color: var(--navy); font-size: 1.2rem; margin-bottom: 0.5rem; }
 .phase-body p { color: var(--muted); margin-bottom: 0.75rem; }
 .phase-body .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
