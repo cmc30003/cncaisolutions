@@ -176,7 +176,7 @@ nav a:hover { color: var(--accent); }
 
   /* Steps */
   .steps { flex-direction: column; align-items: stretch; }
-  .step { padding: 1.5rem; }
+  .step { padding: 1.5rem; text-align: center; }
   .step-number { font-size: 2rem; }
   .step-arrow { transform: rotate(90deg); align-self: center; padding: 0; font-size: 1.2rem; }
 
