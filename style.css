@@ -150,12 +150,31 @@ nav a:hover { color: var(--accent); }
 .footer-grid div a:hover { color: var(--accent); }
 .footer-copy { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; font-size: 0.82rem; text-align: center; }
 
+/* ── Hamburger menu ── */
+.header-right { display: flex; align-items: center; gap: 0.75rem; }
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Model tabs (services page) ── */
+.model-tabs { gap: 0; margin-bottom: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.model-tab { flex: 1; padding: 0.7rem 0.5rem; background: var(--white); border: none; border-right: 1px solid var(--border); font-size: 0.82rem; font-weight: 600; color: var(--muted); cursor: pointer; transition: background 0.2s, color 0.2s; }
+.model-tab:last-child { border-right: none; }
+.model-tab.active { background: var(--navy); color: var(--white); }
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  /* Header */
-  nav { display: none; }
-  .btn-sm { display: none; }
-  .site-header .container { justify-content: center; }
+  /* Header — hamburger */
+  .hamburger { display: flex; }
+  .desktop-audit { display: none; }
+  .site-header .container { justify-content: space-between; }
+  nav { display: none; position: fixed; top: 57px; left: 0; right: 0; bottom: 0; background: var(--navy); flex-direction: column; padding: 2rem 1.5rem; gap: 0; z-index: 99; overflow-y: auto; }
+  nav.open { display: flex; }
+  nav a { color: rgba(255,255,255,0.85); font-size: 1.1rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  nav a:last-child { border-bottom: none; }
+  .nav-audit { background: var(--amber) !important; color: var(--navy) !important; text-align: center; border-radius: var(--radius); margin-top: 1rem; border-bottom: none !important; font-weight: 700; }
 
   /* Layout */
   .container { padding: 0 1.25rem; }
@@ -187,6 +206,19 @@ nav a:hover { color: var(--accent); }
   /* Cards */
   .card-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
+
+  /* Pricing — hide "not included" rows and tighten */
+  .feature-list li.no { display: none; }
+  .price-card-body { padding: 1.25rem; }
+  .feature-list { gap: 0.5rem; }
+  .feature-list li { font-size: 0.88rem; }
+  .price-card-header { padding: 1.25rem; }
+  .price-card-header .price { font-size: 1.6rem; }
+  .pricing-section { margin-bottom: 2rem; }
+
+  /* Process — hide verbose body text, keep heading + tags */
+  .phase-body > p { display: none; }
+  .phase-body h3 { margin-bottom: 0.75rem; }
 
   /* Forms */
   .form-card { padding: 1.5rem; max-width: 100%; }

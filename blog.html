@@ -12,14 +12,20 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">C&amp;C AI Solutions</a>
-      <nav>
+      <nav id="main-nav">
         <a href="services.html">Services</a>
         <a href="process.html">How It Works</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
+        <a href="audit.html" class="btn btn-sm nav-audit">Free Audit</a>
       </nav>
-      <a href="audit.html" class="btn btn-sm">Free Audit</a>
+      <div class="header-right">
+        <a href="audit.html" class="btn btn-sm desktop-audit">Free Audit</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -78,5 +84,6 @@
     </div>
   </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>

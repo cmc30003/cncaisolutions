@@ -12,14 +12,20 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">C&amp;C AI Solutions</a>
-      <nav>
+      <nav id="main-nav">
         <a href="services.html">Services</a>
         <a href="process.html">How It Works</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
+        <a href="audit.html" class="btn btn-sm nav-audit">Free Audit</a>
       </nav>
-      <a href="audit.html" class="btn btn-sm">Free Audit</a>
+      <div class="header-right">
+        <a href="audit.html" class="btn btn-sm desktop-audit">Free Audit</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -36,8 +42,15 @@
     <section class="section">
       <div class="container">
 
+        <!-- Mobile model tabs -->
+        <div class="model-tabs" style="display:none;">
+          <button class="model-tab active" data-target="handoff">Handoff</button>
+          <button class="model-tab" data-target="subscription">New Build</button>
+          <button class="model-tab" data-target="existing">Existing Site</button>
+        </div>
+
         <!-- Model 1: Handoff -->
-        <div class="pricing-section" id="handoff">
+        <div class="pricing-section" id="handoff" data-model="handoff">
           <h2>Model 1 — Handoff Build</h2>
           <p class="subhead">We build it, you own it. One-time custom build with a 30-day bug fix window. No ongoing commitment required.</p>
           <div class="pricing-grid">
@@ -123,7 +136,7 @@
         </div>
 
         <!-- Model 2: New Build Subscription -->
-        <div class="pricing-section" id="subscription">
+        <div class="pricing-section" id="subscription" data-model="subscription">
           <h2>Model 2 — New Build + Monthly Care</h2>
           <p class="subhead">Build fee is $100 less than the handoff model. We host your site, handle updates, SEO, and reporting every month. Month-to-month with a 3-month minimum.</p>
           <div class="pricing-grid">
@@ -213,7 +226,7 @@
         </div>
 
         <!-- Model 3: Existing Site -->
-        <div class="pricing-section" id="existing">
+        <div class="pricing-section" id="existing" data-model="existing">
           <h2>Model 3 — Existing Site Care</h2>
           <p class="subhead">Already have a website? No full rebuild required. We audit it, migrate it to our hosting, and maintain it monthly. One-time $199 onboarding covers the audit, setup, and migration.</p>
           <div class="pricing-grid">
@@ -347,5 +360,6 @@
     </div>
   </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>
