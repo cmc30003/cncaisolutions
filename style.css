@@ -200,15 +200,21 @@ nav a:hover { color: var(--accent); }
   .two-col { grid-template-columns: 1fr; gap: 2rem; }
   .founder-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 
+  /* Homepage problem/solution — trim to one paragraph on mobile */
+  .two-col > div > p + p { display: none; }
+  .two-col > div > h2 { font-size: 1.4rem; margin-bottom: 0.75rem; }
+
   /* Steps */
   .steps { flex-direction: column; align-items: stretch; }
   .step { padding: 1.5rem; text-align: center; }
   .step-number { font-size: 2rem; }
   .step-arrow { transform: rotate(90deg); align-self: center; padding: 0; font-size: 1.2rem; }
 
-  /* Process phases */
-  .phase { grid-template-columns: 72px 1fr; gap: 1rem; }
-  .phase-badge { width: 72px; font-size: 0.68rem; padding: 0.5rem 0.35rem; }
+  /* Process phases — centered badge, stacked layout */
+  .phase { grid-template-columns: 1fr; gap: 0.5rem; text-align: center; }
+  .phase-badge { width: auto; display: inline-flex; flex-direction: row; gap: 0.4rem; align-self: center; margin: 0 auto; border-radius: var(--radius); padding: 0.4rem 1rem; font-size: 0.75rem; }
+  .phase-body h3 { text-align: center; }
+  .phase-body .tags { justify-content: center; }
 
   /* Cards */
   .card-grid { grid-template-columns: 1fr; }
