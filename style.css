@@ -72,7 +72,7 @@ nav a:hover { color: var(--accent); }
 .checklist li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 
 /* ── Steps ── */
-.steps { display: flex; align-items: flex-start; gap: 1rem; }
+.steps { display: flex; align-items: stretch; gap: 1rem; }
 .step { flex: 1; text-align: center; padding: 2rem 1.5rem; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); }
 .step-number { font-size: 2.5rem; font-weight: 800; color: var(--accent); opacity: 0.4; line-height: 1; margin-bottom: 0.75rem; }
 .step h3 { color: var(--navy); margin-bottom: 0.5rem; }
